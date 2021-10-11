@@ -37,7 +37,7 @@ export default (app) => {
   app.disable("x-powered-by");
   app.disable("etag");
 
-  app.use(rateLimiter);
+  // app.use(rateLimiter);
   app.use(prefix, routes);
 
   app.get("/", (_req, res) => {
@@ -64,11 +64,11 @@ export default (app) => {
     next();
   });
 
-  app.use((_req, _res, next) => {
-    const error = new Error("Endpoint could not find!");
-    error.status = 404;
-    next(error);
-  });
+  // app.use((_req, _res, next) => {
+  //   const error = new Error("Endpoint could not find!");
+  //   error.status = 404;
+  //   next(error);
+  // });
 
   app.use((error, req, res, _next) => {
     res.status(error.status || 500);
