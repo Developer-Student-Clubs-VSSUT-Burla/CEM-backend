@@ -1,19 +1,17 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
-import { dbUri } from '../config/index.js';
+import { dbUri } from "../config/index.js";
 
 export default async () => {
-  await mongoose.connect(dbUri,
-    {
-      useCreateIndex: true,
+  await mongoose
+    .connect(dbUri, {
       useNewUrlParser: true,
-      useUnifiedTopology: true
-    }
-  )
-    .then(() => {
-      console.log('Mongodb Connection');
+      useUnifiedTopology: true,
     })
-    .catch(err => {
+    .then(() => {
+      console.log("Mongodb Connection Successfull");
+    })
+    .catch((err) => {
       console.log(err);
     });
 };

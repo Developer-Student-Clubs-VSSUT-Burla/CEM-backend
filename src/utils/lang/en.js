@@ -1,7 +1,9 @@
+// Contains All Logs Messages
+
 export default {
   "verificationCodeTitle": "Verification Code - (App Name)",
   "verificationCodeBody": "Here is your confirm code:",
-  "welcomeCode": "Welcome to the (App Name),",
+  "welcomeCode": "Welcome to the CEM - Backend,",
   "00005": "Please provide all information to send a code.",
   "00006": "Access denied. No token provided.",
   "00007": "Invalid user id.",
