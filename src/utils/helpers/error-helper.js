@@ -9,7 +9,7 @@ export default (code, req, errorMessage) => {
   let userId = "";
   if (req && req.user && req.user._id) userId = req.user._id;
 
-  const Message = en[key];
+  const Message = error_codes[key];
 
   if (Message.includes("server error")) {
     logger(code, userId, errorMessage, "Server Error", req);
@@ -35,12 +35,7 @@ export default (code, req, errorMessage) => {
  *         resultCode:
  *           $ref: '#/components/schemas/ResultCode'
  *     ResultMessage:
- *       type: object
- *       properties:
- *         en:
- *           type: string
- *         tr:
- *           type: string
+ *       type: string
  *     ResultCode:
  *       type: string
  */

@@ -33,29 +33,6 @@ const userSchema = new Schema(
       enum: ["admin", "user", "reader", "creator"],
       default: "user",
     },
-    language: {
-      type: String,
-      enum: ["tr", "en"],
-      default: "en",
-    },
-    isPremium: {
-      type: Boolean,
-      default: false,
-    },
-    //NOTE: You can change the gender options acc. to your needs in the app.
-    gender: {
-      type: String,
-      enum: ["male", "female", "other"],
-    },
-    countryCode: {
-      type: String,
-    },
-    timezone: {
-      type: Number,
-    },
-    birthDate: {
-      type: Date,
-    },
     photoUrl: {
       type: String,
       default:
@@ -69,15 +46,6 @@ const userSchema = new Schema(
     //NOTE: To check whether the user skipped the email-verification step or not. You can delete the unverified accounts day by day.
     isVerified: {
       type: Boolean,
-      required: true,
-    },
-    deviceId: {
-      type: String,
-    },
-    //NOTE: You can add more options acc. to your need.
-    platform: {
-      type: String,
-      enum: ["Android", "IOS"],
       required: true,
     },
     //NOTE: In case the user delete its account, you can store its non-personalized information anonymously.
@@ -109,31 +77,12 @@ export default User;
  *         type:
  *           type: string
  *           enum: ['user', 'admin', 'creator', 'reader']
- *         language:
- *           type: string
- *           enum: ['tr', 'en']
- *         isPremium:
- *           type: boolean
- *         gender:
- *           type: string
- *           enum: ['male', 'female', 'other']
- *         countryCode:
- *           type: string
- *         timezone:
- *           type: number
- *         birthDate:
- *           type: string
  *         photoUrl:
  *           type: string
  *         isActivated:
  *           type: boolean
  *         isVerified:
  *           type: boolean
- *         deviceId:
- *           type: string
- *         platform:
- *           type: string
- *           enum: ['Android', 'IOS']
  *         deletedAt:
  *           type: string
  */
