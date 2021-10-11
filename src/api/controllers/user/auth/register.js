@@ -15,6 +15,7 @@ import geoip from "geoip-lite";
 const { lookup } = geoip;
 
 export default async (req, res) => {
+  console.log(req.body)
   const { error } = validateRegister(req.body);
   if (error) {
     let code = "00025";
@@ -49,7 +50,7 @@ export default async (req, res) => {
   let username = "";
   let tempName = "";
   let existsUsername = true;
-  let name = turkishToEnglish(req.body.name);
+  let name = req.body.name;
   if (name.includes(" ")) {
     tempName = name.trim().split(" ").slice(0, 1).join("").toLowerCase();
   } else {
@@ -69,7 +70,7 @@ export default async (req, res) => {
     password: hashed,
     name: name,
     username: username,
-    language: req.body.language,
+    language: "en",
     platform: req.body.platform,
     isVerified: false,
     countryCode: geo == null ? "US" : geo.country,
@@ -113,9 +114,6 @@ export default async (req, res) => {
  *                  type: string
  *                name:
  *                  type: string
- *                language:
- *                  type: string
- *                  enum: ['tr', 'en']
  *                platform:
  *                  type: string
  *                  enum: ['Android', 'IOS']
