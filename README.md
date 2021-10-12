@@ -10,7 +10,7 @@ For those interested in working on the frontend part of the project, do check th
 
 ## Demo
 
-The project is under development and access to main API is restricted. If tou want to test the API, do contact our team to get neccessary credentials
+The project is under development and access to the main API is restricted. If you want to test the API, do contact our team to get neccessary credentials
 
 
 ## Tech Stack
@@ -78,11 +78,11 @@ New Feature Changes are always welcome
   
 ## Support
 
-For support, email GDSC-VSSUT or join our Discord channel.
+For support, mail to dscvssutburla@gmail.com or join our Discord channel.
 
   
 ## Feedback
 
-If you have any feedback, please reach out to us at our Discord Channel
+In case of any feedback, reach out to us on our Discord Channel.
 
   
