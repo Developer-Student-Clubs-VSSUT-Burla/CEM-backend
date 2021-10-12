@@ -8,7 +8,7 @@ config();
 // const { DB_URI, PORT, JWT_SECRET_KEY, REFRESH_TOKEN_SECRET_KEY, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_REGION, BUCKET_NAME } = process.env
 const { DB_URI, PORT, JWT_SECRET_KEY, REFRESH_TOKEN_SECRET_KEY } = process.env;
 
-export const port = PORT || 3000;
+export const port = PORT || 5000;
 export const jwtSecretKey = JWT_SECRET_KEY;
 export const refreshTokenSecretKey = REFRESH_TOKEN_SECRET_KEY;
 export const dbUri = DB_URI;
