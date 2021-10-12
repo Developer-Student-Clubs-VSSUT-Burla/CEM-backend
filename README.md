@@ -31,7 +31,7 @@ Initiated with the incentive to provide a common rostrum to host all college eve
 
 This repository is for the backend development of the project. The API of the system is well developed and it takes very less time for the website to get loaded. It provides adaptability to every kind of search engines and there is rarely any server issue noticed till date.
 
-For those interested in working on the frontend part of the project, do checkout the [frontend repository]((https://github.com/Developer-Student-Clubs-VSSUT-Burla/CEM-frontend).
+For those interested in working on the frontend part of the project, do checkout the [frontend repository](https://github.com/Developer-Student-Clubs-VSSUT-Burla/CEM-frontend).
 
 ## 💻 API
 
