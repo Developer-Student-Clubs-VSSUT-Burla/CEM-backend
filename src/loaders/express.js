@@ -44,7 +44,7 @@ export default (app) => {
     return res
       .status(200)
       .json({
-        resultMessage: "Project is successfully working...",
+        resultMessage: "Project is successfully working",
         resultCode: "00004",
       })
       .end();
