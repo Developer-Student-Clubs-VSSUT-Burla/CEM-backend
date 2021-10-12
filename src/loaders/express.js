@@ -12,12 +12,12 @@ import bodyParser from "body-parser";
 
 export default (app) => {
   process.on("uncaughtException", async (error) => {
-    // console.log(error);
+    console.log(error);
     logger("00001", "", error.message, "Uncaught Exception", "");
   });
 
   process.on("unhandledRejection", async (ex) => {
-    // console.log(ex);
+    console.log(ex);
     logger("00002", "", ex.message, "Unhandled Rejection", "");
   });
 
@@ -26,16 +26,16 @@ export default (app) => {
     process.exit(1);
   }
 
-  app.enable("trust proxy");
+  // app.enable("trust proxy");
   app.use(cors());
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(bodyParser.json());
-  app.use(morgan("dev"));
-  app.use(helmet());
-  app.use(compression());
+  // app.use(morgan("dev"));
+  // app.use(helmet());
+  // app.use(compression());
   app.use(express.static("public"));
-  app.disable("x-powered-by");
-  app.disable("etag");
+  // app.disable("x-powered-by");
+  // app.disable("etag");
 
   // app.use(rateLimiter);
   app.use(prefix, routes);

@@ -35,17 +35,19 @@ export default async (req, res) => {
   if (exists) return res.status(409).json(errorHelper("00032", req));
 
   const hashed = await hash(req.body.password, 10);
-
+  
+  // Sending Code to Email
   const emailCode = generateRandomCode(4);
-  await sendCodeToEmail(
-    req.body.email,
-    req.body.name,
-    emailCode,
-    req.body.language,
-    "register",
-    req,
-    res
-  );
+  
+  // await sendCodeToEmail(
+  //   req.body.email,
+  //   req.body.name,
+  //   emailCode,
+  //   req.body.language,
+  //   "register",
+  //   req,
+  //   res
+  // );
 
   let username = "";
   let tempName = "";
@@ -63,18 +65,14 @@ export default async (req, res) => {
     });
   } while (existsUsername);
 
-  const geo = lookup(ipHelper(req));
+  // const geo = lookup(ipHelper(req));
 
   let user = new User({
     email: req.body.email,
     password: hashed,
     name: name,
     username: username,
-    language: "en",
-    platform: req.body.platform,
     isVerified: false,
-    countryCode: geo == null ? "US" : geo.country,
-    timezone: req.body.timezone,
     lastLogin: Date.now(),
   });
 
@@ -113,13 +111,6 @@ export default async (req, res) => {
  *                password:
  *                  type: string
  *                name:
- *                  type: string
- *                platform:
- *                  type: string
- *                  enum: ['Android', 'IOS']
- *                timezone:
- *                  type: number
- *                deviceId:
  *                  type: string
  *      tags:
  *        - User
