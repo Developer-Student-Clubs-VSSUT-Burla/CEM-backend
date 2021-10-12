@@ -38,6 +38,7 @@ For those interested in working on the frontend part of the project, do checkout
 The project is under **development** and access to main API is restricted. If you want to test the API, do [contact](https://github.com/Developer-Student-Clubs-VSSUT-Burla) our team to get necessary credentials.
 
 
+
 ## 🔧 Tech Stack Used
 
 |Client |Server |Database |
@@ -100,10 +101,10 @@ The project has been inspired by various event management sites. Few of them are
  - [Townscript](https://www.townscript.com/in/online)
  - [EventBrite](https://www.eventbrite.com/)
 
-
 ## ⚒ Support, Suggestion, Updates
 
 Join our Discord server to get regular updates, quick support and better guidance.  [Join Now](https://discord.gg/whFTXghqdV)
+
 
 ## 📜 License
 
