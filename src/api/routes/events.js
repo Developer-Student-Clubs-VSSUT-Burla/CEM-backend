@@ -5,6 +5,6 @@ import {} from "../controllers/user/index.js";
 const router = Router();
 
 // Event Management
-router.post("/", createEvent);
+// router.post("/", createEvent);
 
 export default router;

@@ -52,6 +52,14 @@ const userSchema = new Schema(
     deletedAt: {
       type: Date,
     },
+
+
+    Event:[{
+      type:Schema.Types.ObjectId,
+      ref:"Event"
+    }],
+
+
   },
   {
     timestamps: true,
