@@ -54,7 +54,7 @@ const userSchema = new Schema(
     },
 
 
-    Event:[{
+    event:[{
       type:Schema.Types.ObjectId,
       ref:"Event"
     }],
