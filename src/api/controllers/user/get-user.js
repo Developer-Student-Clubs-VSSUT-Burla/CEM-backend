@@ -53,6 +53,4 @@ export default async (req, res) => {
  *              application/json:
  *                  schema:
  *                      $ref: '#/components/schemas/Result'
- *
-
-**/
+ */

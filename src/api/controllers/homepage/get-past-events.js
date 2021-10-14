@@ -2,7 +2,7 @@ import { Event } from "../../../models/index.js";
 import { errorHelper, logger, getText } from "../../../utils/index.js";
 
 export default async (req, res) => {
-  const pastEvent = await Event.find({
+  const pastEvents = await Event.find({
     eventDate: {
       $lt: new Date(),
     },
@@ -10,17 +10,17 @@ export default async (req, res) => {
     return res.status(500).json(errorHelper("00088", req, err.message));
   });
 
-  logger("00093", req.pastEvent._id, getText("00093"), "Info", req);
+  logger("00093", getText("00093"), "Info", req);
   return res.status(200).json({
     resultMessage: getText("00093"),
     resultCode: "00093",
-    pastEvent,
+    pastEvents,
   });
 };
 
 /** 
  * @swagger
- * /event:
+ * /homepage/get-past-events:
  *    get:
  *      summary: Get past events  Info
  *      parameters:
@@ -30,7 +30,7 @@ export default async (req, res) => {
  *            type: string
  *          description: Put access token here
  *      tags:
- *        - Event
+ *        - Homepage
  *      responses:
  *        "200":
  *          description: The past events information has gotten successfully.
@@ -57,5 +57,5 @@ export default async (req, res) => {
  *              application/json:
  *                  schema:
  *                      $ref: '#/components/schemas/Result'
- **/
+ */
 

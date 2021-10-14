@@ -5,6 +5,6 @@ import {getPastEvents} from "../controllers/homepage/index.js";
 const router = Router();
 
 // Event Management
-router.get("/", getPastEvents);
+router.get("/get-past-events", getPastEvents);
 
 export default router;
