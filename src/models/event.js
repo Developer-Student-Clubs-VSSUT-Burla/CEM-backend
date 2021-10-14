@@ -50,7 +50,7 @@ export default Event;
  *         name:
  *           type: string
  *         eventDate:
- *           type: date
+ *           type: string
  *         eventType:
  *           type: string
  *           enum: ["online", "offline"]
@@ -59,7 +59,7 @@ export default Event;
  *         expectedAttendees:
  *           type: number
  *         createdBy:
- *           type: Schema.Types.ObjectId
+ *           type: string
  *         createdOn:
- *           type: date
+ *           type: string
  */
