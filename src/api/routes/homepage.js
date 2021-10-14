@@ -1,10 +1,10 @@
 import { Router } from "express";
 import { auth } from "../middlewares/index.js";
-import {} from "../controllers/event/index.js";
+import {getPastEvents} from "../controllers/homepage/index.js";
 
 const router = Router();
 
 // Event Management
-// router.get("/", createEvent);
+router.get("/", getPastEvents);
 
 export default router;
