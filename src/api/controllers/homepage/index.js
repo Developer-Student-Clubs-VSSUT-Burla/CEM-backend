@@ -1,0 +1,1 @@
+export { default as getPastEvents } from "./get-past-events.js";

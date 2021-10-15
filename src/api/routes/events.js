@@ -1,11 +1,11 @@
 import { Router } from "express";
 import { auth } from "../middlewares/index.js";
-import {} from "../controllers/user/index.js";
+import {} from "../controllers/event/index.js";
 
 const router = Router();
 
 // Event Management
-// router.post("/", createEvent);
+// router.get("/", createEvent);
 
 // Deleting Event Route
 import delete_event from "../controllers/event/delete-event.js";

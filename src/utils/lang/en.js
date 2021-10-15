@@ -59,5 +59,6 @@ export default {
   "00084": "There is already a user with this username, please enter another.",
   "00086": "Your profile information was changed successfully.",
   "00089": "The user information has gotten successfully.",
-  "00092": "Your account was deleted successfully."
+  "00092": "Your account was deleted successfully.",
+  "00093":"The Past Events information has gotten successfully."
 };

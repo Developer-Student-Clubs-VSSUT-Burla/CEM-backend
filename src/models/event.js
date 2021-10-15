@@ -1,35 +1,36 @@
-import mongoose from "mongoose";
 
-const eventSchema = new mongoose.Schema(
+import mongoose from "mongoose";
+const { Schema, model } = mongoose;
+
+const eventSchema = new Schema(
   {
-    Name: {
+    name: {
       type: String,
       required: true,
     },
-    Date: {
+    eventDate: {
       type: Date,
       required: true,
+     
     },
-    Type: {
+    eventType: {
       type: String,
       enum: ["online", "offline"],
       required: true,
     },
-    RegistrationFee: {
+    registrationFee: {
       type: Number,
       required: true,
     },
-    ExpectedAttendees: {
+    expectedAttendees: {
       type: Number,
       required: true,
     },
-
-    CreatedBy: {
-      type: mongoose.Schema.Types.ObjectId,
+    createdBy: {
+      type: Schema.Types.ObjectId,
       ref: "User",
     },
-
-    CreatedOn: {
+    createdOn: {
       type: Date,
       required: true,
     },
@@ -38,5 +39,28 @@ const eventSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
-const Event = mongoose.model("Event", eventSchema);
+const Event = model("Event", eventSchema);
 export default Event;
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     Event:
+ *       type: object
+ *       properties:
+ *         name:
+ *           type: string
+ *         eventDate:
+ *           type: string
+ *         eventType:
+ *           type: string
+ *           enum: ["online", "offline"]
+ *         registrationFee:
+ *           type: number
+ *         expectedAttendees:
+ *           type: number
+ *         createdBy:
+ *           type: string
+ *         createdOn:
+ *           type: string
+ */
