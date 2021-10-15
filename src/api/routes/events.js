@@ -19,4 +19,12 @@ import {
 router.get("/event/all", get_all_event_names);
 router.get("/event/view", get_event_stats);
 
+// Managing the attending members of an event
+import {
+  adding_participant,
+  removing_participant,
+} from "../controllers/event/update-event.js";
+router.get("/event/add-member", adding_participant);
+router.get("/event/del-member", removing_participant);
+
 export default router;
