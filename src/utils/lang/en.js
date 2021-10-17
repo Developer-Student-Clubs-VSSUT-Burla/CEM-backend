@@ -60,5 +60,6 @@ export default {
   "00086": "Your profile information was changed successfully.",
   "00089": "The user information has gotten successfully.",
   "00092": "Your account was deleted successfully.",
-  "00093":"The Past Events information has gotten successfully."
+  "00093":"The Past Events information has gotten successfully.",
+  "00094":"Active events gotten successfully"
 };
